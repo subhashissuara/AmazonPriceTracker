@@ -10,7 +10,7 @@ import smtplib
 s = HTMLSession()
 
 # ------------ EDIT BELOW THIS LINE ---------------
-products_to_track = ["B07ZRXF7M8", "B09G9FPGTN"]
+products_to_track = ["B07ZRXF7M8", "B09G9HRYFZ"]
 from_email_id = ""
 from_email_id_password = ""
 to_email_id = ""
@@ -33,7 +33,7 @@ print("Searching for products...")
 for product in products_to_track:
     link_to_product = f'https://www.amazon.in/dp/{product}'
     
-    r = s.get(link_to_product)
+    r = s.get(link_to_product) # r = response, s = session
     r.html.render(sleep=1)
 
     try:
