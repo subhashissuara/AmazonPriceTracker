@@ -78,6 +78,7 @@ for product in products_to_track:
             finally:
                 server.quit() 
         else:
+            database[product]['price'] = price 
             print("Price hasn't dropped!")
 
     else:
