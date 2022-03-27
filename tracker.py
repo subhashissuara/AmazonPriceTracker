@@ -58,7 +58,7 @@ for product in products_to_track:
 
     if product in database:
         if (float(price) < float(database[product]['price'])):
-            database[product]['price'] = price
+            
             print(f'{product_name} price has dropped! Notifying via email...')
             
             # Send email notification
@@ -78,8 +78,8 @@ for product in products_to_track:
             finally:
                 server.quit() 
         else:
-            database[product]['price'] = price 
             print("Price hasn't dropped!")
+        database[product]['price'] = price # Updating database
 
     else:
         database[product] = {
