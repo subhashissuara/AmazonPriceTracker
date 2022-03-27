@@ -6,16 +6,17 @@
 from requests_html import HTMLSession
 import json
 import smtplib
+from config import PRODUCTS_TO_TRACK, FROM_EMAIL_ID, FROM_EMAIL_ID_PASSWORD, TO_EMAIL_ID, SMTP_HOST, SMTP_PORT
 
 s = HTMLSession()
 
 # ------------ EDIT BELOW THIS LINE ---------------
-products_to_track = ["B07ZRXF7M8", "B09G9HRYFZ"]
-from_email_id = ""
-from_email_id_password = ""
-to_email_id = ""
-smtp_host = "smtp.gmail.com"
-smtp_port = 587
+products_to_track = PRODUCTS_TO_TRACK
+from_email_id = FROM_EMAIL_ID
+from_email_id_password = FROM_EMAIL_ID_PASSWORD
+to_email_id = TO_EMAIL_ID
+smtp_host = SMTP_HOST
+smtp_port = SMTP_PORT
 # ------------ EDIT ABOVE THIS LINE ---------------
 
 database = {}
